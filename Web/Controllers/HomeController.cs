@@ -22,6 +22,7 @@ namespace Web.Controllers
         {
             // Debugging Information 
             ViewData["Message"] = "Debugging Info.";
+            ViewData["REGISTRYIP"] = System.Net.Dns.GetHostAddresses("stevelasuap.azurecr.io")[0].ToString();
 
             ViewData["HOSTNAME"] = Environment.GetEnvironmentVariable("COMPUTERNAME") ??
                                             Environment.GetEnvironmentVariable("HOSTNAME");
