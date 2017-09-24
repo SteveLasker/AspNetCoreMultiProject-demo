@@ -1,0 +1,14 @@
+version: '3'
+
+services:
+  web:
+    image: ${DOCKER_REGISTRY}demos/web:1
+    build:
+      context: .
+      dockerfile: Web/Dockerfile
+
+  api:
+    image: ${DOCKER_REGISTRY}demos/api:1
+    build:
+      context: .
+      dockerfile: Api/Dockerfile
